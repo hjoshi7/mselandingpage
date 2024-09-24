@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins to all elements */
+}
+
+body, html {
+    height: 100%;
+    color: #fff;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif; /* Ensure Poppins is applied to the body */
+}
+
+/* Overall container */
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #000839, #06038D); /* Apply the gradient directly to the header */
+    color: #fff;
+    padding: 17px 0;
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow to lift header above content */
+}
+
+header .logo img.logo-image {
+    width: 40px; /* Adjust the size of the logo image */
+    height: auto;
+    margin-right: 0.5px; /* Reduced space between the logo image and the text */
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 5px; /* Adjust this value to move the logo down */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto; /* Center the container horizontally */
+}
+
+header .logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: none;
+    color: #FF671F; /* Ensure logo text is consistent */
+    display: inline-flex;
+    align-items: center;
+    padding-left: 20px; /* Move the logo inward */
+}
+
+header .logo a {
+    text-decoration: none;
+    background: linear-gradient(#FF671F, #FF671F, #ffffff, #046A38, #046A38);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    transition: transform 0.3s ease, background 0.3s ease;
+    display: inline-block;
+}
+
+header .logo a:hover {
+    transform: scale(1.1);
+    color: #FF671F;
+}
+
+header nav {
+    padding-right: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #FF671F;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+/* Hero section */
+.hero {
+    height: 100vh;
+    color: #fff;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #000839, #06038D);
+    padding-left: 1%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 80px;
+}
+
+.fade-in-section-up-top-text {
+    opacity: 0; /* Start with the element fully transparent */
+    transform: translateX(20px); /* Start with the element shifted down */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Define the transition effects for opacity and transform */
+}
+
+.fade-in-section-up-top-text.visible {
+    opacity: 1; /* Make the element fully opaque */
+    transform: translateY(0); /* Move the element to its original position */
+}
+
+/* Initial state for the About section image */
+.fade-in-section-left-top-image {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-20px); /* Initially shifted left */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Transition for fade and slide effect */
+}
+
+/* Animated state for the About section image */
+.fade-in-section-left-top-image.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Reset position */
+}
+
+/* Initial state for the About section text */
+.fade-in-section-right-text {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Initially shifted up */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Transition for fade and slide effect */
+}
+
+/* Animated state for the About section text */
+.fade-in-section-right-text.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Reset position */
+}
+
+.hero .hero-content {
+    max-width: 50%;
+    text-align: left;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.hero .fade-in-title {
+    font-size: 80px;
+    margin-bottom: 110px;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1s ease-out forwards;
+    text-align: left;
+}
+
+.smaller-text {
+    font-size: 37.15px;
+    font-weight: normal;
+    display: block;
+    margin-bottom: 0px;
+}
+
+.sports-trading-gradient {
+    background: linear-gradient(#FF671F, #FF671F, #ffffff, #046A38, #046A38);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 65px;
+    display: block;
+    margin-top: 0px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-top: -100px;
+    margin-bottom: 30px;
+    color: #fff;
+    opacity: 0;
+    animation: fadeInSubtitle 1s ease-out 1s forwards;
+    text-align: left;
+    max-width: 80%;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background: #046A38;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInSubtitle 1s ease-out 1s forwards;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: #034F2E;
+}
+
+.hero .btn:active {
+    transform: scale(1.1);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Adjust the distance as needed */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSubtitle {
+    to {
+        opacity: 1;
+    }
+}
+
+/* About, features, contact, footer */
+.about, .features, .contact, footer {
+    padding: 60px 0;
+    text-align: left;
+    background: #fff;
+    color: #000;
+}
+
+.about h2, .features h2, .contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #000;
+    text-align: left;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #000;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.about-content .text h2 {
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px); /* Initial position */
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.2s; /* Delay before starting animation */
+}
+
+.about-content .text p {
+    margin-bottom: 30px; /* Adjust this value to add space below the paragraph */
+    opacity: 0;
+    transform: translateY(20px); /* Initial position */
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.5s; /* Delay before starting animation */
+}
+
+.about-content .text a {
+    margin-top: 30px; /* Optional: Adjust this value if you want to control space above the button */
+    opacity: 0;
+    transform: translateY(20px); /* Initial position */
+    animation: slideUp 1s ease-out forwards;
+    animation-delay: 0.8s; /* Delay before starting animation */
+}
+
+.about-content img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.about-content .text {
+    width: 45%;
+    color: #000;
+    text-align: left;
+}
+
+.features .feature-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    color: #000;
+    text-align: left;
+}
+
+.features .feature {
+    width: 30%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.features .feature:hover {
+    transform: scale(1.05);
+}
+
+.features .feature img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background: #fff;
+    color: #000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Waitlist page specific styles */
+.waitlist {
+    padding: 120px 0; /* Ensure space above the form */
+    text-align: left;
+    background: #f4f4f4; /* Light gray background for contrast */
+    color: #000;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.waitlist .container {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: 0 20px;
+}
+
+.waitlist-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.waitlist-form label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #333;
+}
+
+.waitlist-form input,
+.waitlist-form select {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+}
+
+.waitlist-form input:focus,
+.waitlist-form select:focus {
+    border-color: #046A38;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 106, 56, 0.3);
+}
+
+.waitlist-form button {
+    padding: 15px;
+    background: #046A38;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.waitlist-form button:hover {
+    background: #034F2E;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    body {
+        margin-top: 100px;
+    }
+}

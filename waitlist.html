@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Waitlist - Mahavir Sports Exchange</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Keep the navigation bar header -->
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="mse_logo_website.png" alt="Logo" class="logo-image">
+                    Mahavir Sports Exchange
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#about" data-scroll>About</a></li>
+                    <li><a href="index.html#features" data-scroll>Features</a></li>
+                    <li><a href="index.html#contact" data-scroll>Contact</a></li>
+                    <li><a href="waitlist.html">Join Waitlist</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Waitlist Form Section -->
+    <section class="waitlist">
+        <div class="container">
+            <h2>Join the Waitlist</h2>
+            <p>Be the first to know when Mahavir Sports Exchange launches! Sign up below to express your interest and receive early access updates.</p>
+            
+            <form class="waitlist-form" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+                <label for="interest">What are you interested in?</label>
+                <select id="interest" name="interest" required>
+                    <option value="trading">Sports Trading</option>
+                    <option value="real-time-data">Real-Time Data</option>
+                    <option value="secure-transactions">Secure Transactions</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <button type="submit" class="btn">Join Waitlist</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mahavir Sports Exchange. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

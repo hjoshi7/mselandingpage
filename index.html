@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSE - Mahavir Sports Exchange</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="mse_logo_website.png" alt="Logo" class="logo-image">
+                    Mahavir Sports Exchange
+                </a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="#about" data-scroll>About</a></li>
+                    <li><a href="#features" data-scroll>Features</a></li>
+                    <li><a href="#contact" data-scroll>Contact</a></li>
+                    <li><a href="waitlist.html">Join Waitlist</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="fade-in-title">
+                    <span class="smaller-text">Invest in the future of</span>
+                    <span class="sports-trading-gradient">Sports Trading</span>
+                </h2>                            
+                <p class="fade-in-subtitle">Join Mahavir Sports Exchange to trade player stocks like a pro. Access real-time data, enjoy a user-friendly interface, and make secure transactions. Empower your sports investments with cutting-edge tools and insights, all in one platform.</p>
+                <a href="#about" class="btn" data-scroll>Learn More</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="container about-content">
+            <img class="about fade-in-section-left-top-image" src="web_img.png" alt="About MSE">
+            <div class="text fade-in-section-right-text">
+                <h2>About MSE</h2>
+                <p>MSE is a revolutionary platform that allows users to trade player stocks like a pro. Our mission is to democratize sports trading by offering a simple and accessible platform for all.</p>
+                <a href="#features" class="btn" data-scroll>Explore Features</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features fade-in-section">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <img src="https://images.indianexpress.com/2022/05/dhoni-kohli.jpg" alt="Real-Time Sports">
+                    <h3>Real-Time Data</h3>
+                    <p>Get access to real-time player and team performance data.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://www.fivereasonssports.com/wp-content/uploads/Pros-and-cons-of-cricket-betting.jpg" alt="Intuitive Interface">
+                    <h3>Intuitive Interface</h3>
+                    <p>Our user-friendly interface makes trading a breeze.</p>
+                </div>
+                <div class="feature">
+                    <img src="https://potomacpulse.org/wp-content/uploads/2023/03/stockmarket.jpeg" alt="Secure Transactions">
+                    <h3>Secure Transactions</h3>
+                    <p>Your investments are safe with our state-of-the-art security protocols.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Interested in learning more? Reach out to us at <a href="mailto:mahavirsportsexchange@gmail.com">mahavirsportsexchange@gmail.com</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mahavir Sports Exchange. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const fadeInImages = document.querySelectorAll('.fade-in-section-left-top-image');
+        const fadeInTexts = document.querySelectorAll('.fade-in-section-right-text');
+
+        function checkVisibility() {
+            const windowHeight = window.innerHeight;
+
+            fadeInImages.forEach(image => {
+                const imageTop = image.getBoundingClientRect().top;
+                const imageBottom = image.getBoundingClientRect().bottom;
+
+                if (imageTop < windowHeight && imageBottom >= 0) {
+                    image.classList.add('visible');
+                }
+            });
+
+            fadeInTexts.forEach(text => {
+                const textTop = text.getBoundingClientRect().top;
+                const textBottom = text.getBoundingClientRect().bottom;
+
+                if (textTop < windowHeight && textBottom >= 0) {
+                    text.classList.add('visible');
+                }
+            });
+        }
+
+        checkVisibility();
+
+        window.addEventListener('scroll', checkVisibility);
+    });
+    </script>
+</body>
+</html>
